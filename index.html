@@ -1,0 +1,808 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rajnish Tiwari | Data Science Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50 text-slate-900">
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+
+      <a href="#home" class="text-lg font-semibold text-slate-900">
+        Rajnish Tiwari
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden gap-6 text-sm text-slate-700 md:flex">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certificates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Mobile Button -->
+      <button id="menu-btn" class="md:hidden">
+        ☰
+      </button>
+
+    </div>
+
+    <!-- Mobile Nav -->
+
+    <nav id="mobile-menu" class="hidden flex-col border-t border-slate-200 bg-white px-4 py-3 md:hidden">
+      <a href="#about" class="py-2">About</a>
+      <a href="#education" class="py-2">Education</a>
+      <a href="#skills" class="py-2">Skills</a>
+      <a href="#projects" class="py-2">Projects</a>
+      <a href="#certifications" class="py-2">Certificates</a>
+      <a href="#contact" class="py-2">Contact</a>
+    </nav>
+  </header>
+
+  <script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    btn.onclick = () => {
+      menu.classList.toggle("hidden");
+      menu.classList.toggle("flex");
+    };
+
+    // Mobile menu ke sabhi links
+    const links = menu.querySelectorAll("a");
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.add("hidden");
+        menu.classList.remove("flex");
+      });
+    });
+  </script>
+
+
+
+  <main class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+    <section id="home" class="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+      <div class="max-w-2xl">
+        <p class="mb-4 text-sm font-medium uppercase tracking-[0.24em] text-slate-500">Aspiring Data Scientist</p>
+        <h1 class="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
+          <span id="typed-name" class="text-indigo-600">Rajnish Tiwari</span>
+        </h1>
+        <p class="mt-6 max-w-xl text-base leading-8 text-slate-700">
+          I build practical data science models and analyses with a strong foundation in statistics, Python, and machine
+          learning.
+        </p>
+        <div class="mt-8 flex items-center gap-3">
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/rajnishtiwari28/" target="_blank" rel="noreferrer"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition hover:bg-slate-100"
+            aria-label="LinkedIn">
+            <span class="text-sm font-semibold">in</span>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/Rajnish-28" target="_blank" rel="noreferrer"
+            class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition hover:bg-slate-100"
+            aria-label="GitHub">
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.091.682-.217.682-.483 0-.237-.009-.866-.014-1.699-2.782.604-3.369-1.342-3.369-1.342-.455-1.156-1.11-1.464-1.11-1.464-.907-.62.069-.607.069-.607 1.003.071 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.338-2.22-.252-4.555-1.11-4.555-4.944 0-1.091.39-1.984 1.03-2.682-.104-.253-.447-1.27.098-2.648 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.378.203 2.395.1 2.648.64.698 1.03 1.591 1.03 2.682 0 3.842-2.337 4.688-4.566 4.936.36.31.68.92.68 1.855 0 1.338-.012 2.419-.012 2.748 0 .268.18.58.688.482A10.003 10.003 0 0022 12c0-5.523-4.477-10-10-10z" />
+            </svg>
+          </a>
+
+          <!-- Resume Button -->
+          <a href="https://drive.google.com/file/d/1PagLxVHkHGPbnvbvJvSVCvgYr2wXvp42/view?usp=drive_link" target="_blank" rel="noreferrer"
+            class="whitespace-nowrap inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-slate-800">
+            View MY Resume
+          </a>
+
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
+        <div class="mx-auto h-40 w-40 overflow-hidden rounded-full shadow-inner sm:h-80 sm:w-80">
+          <img src="profile.jpg" alt="Rajnish Tiwari" class="h-full w-full object-cover">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="mt-20 space-y-6">
+      <div class="flex items-center gap-3">
+        <div class="h-1.5 w-12 rounded-full bg-indigo-600"></div>
+        <h2 class="text-xl font-semibold text-slate-900">About Me</h2>
+      </div>
+      <p class="max-w-3xl text-base leading-8 text-slate-700">
+        I am a motivated Data Science student with hands-on experience in Python, data analysis, and machine learning. I
+        enjoy solving complex problems with data, building models that deliver insights, and learning new tools to
+        improve accuracy and interpretation.
+      </p>
+    </section>
+
+    <section id="education" class="mt-20">
+      <div class="flex items-center gap-3">
+        <div class="h-1.5 w-12 rounded-full bg-indigo-600"></div>
+        <h2 class="text-xl font-semibold text-slate-900">Education</h2>
+      </div>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2">
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div class="flex items-center justify-between gap-1">
+            <div>
+              <h3 class="text-lg font-semibold text-slate-900">B.S. in Data Science and Application</h3>
+              <p class="mt-1 text-sm text-slate-600">Indian Institute of Techonoloy, Madras</p>
+            </div>
+            <span
+              class="rounded-full bg-slate-100 px-5 py-1 text-xs font-medium uppercase tracking-[0.2em] text-slate-600">2025-2029</span>
+          </div>
+          <div class="mt-4 text-sm leading-7 text-slate-700">
+            <p class="font-medium text-slate-900">Relevant Coursework</p>
+            <ul class="mt-1 list-disc pl-2 text-slate-600">
+              <li>Mathematics For Data Science</li>
+              <li>Statistics for Data Science</li>
+              <li>Understanding Data and Charts</li>
+              <li>Python and Python Libraries</li>
+            </ul>
+          </div>
+          <div class="mt-5 flex flex-wrap gap-3 text-sm">
+            <span class="rounded-full bg-blue-50 px-3 py-1 font-medium text-blue-700">
+              Current CGPA: 9.8 / 10
+            </span>
+          </div>
+        </article>
+
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div class="flex items-center justify-between gap-1">
+            <div>
+              <h3 class="text-lg font-semibold text-slate-900">B.Tech in Computer Sccience and Engineering</h3>
+              <p class="mt-1 text-sm text-slate-600">Kamla Nehru Instuitute of Technology, Sultanpur</p>
+            </div>
+            <span
+              class="rounded-full bg-slate-100 px-2 py-1 text-xs font-medium uppercase tracking-[0.1em] text-slate-600">2024-2028</span>
+          </div>
+          <div class="mt-4 text-sm leading-7 text-slate-700">
+            <p class="font-medium text-slate-900">Relevant Coursework</p>
+            <ul class="mt-1 list-disc pl-2 text-slate-600">
+              <li>Python Programming</li>
+              <li>Programming For Problem Solving</li>
+              <li>Data Structures and Algorithm</li>
+              <li>Hypothesis Testing</li>
+            </ul>
+            <div class="mt-5 flex flex-wrap gap-3 text-sm">
+              <span class="rounded-full bg-blue-50 px-3 py-1 font-medium text-blue-700">
+                Current CGPA: 8.82 / 10
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="mt-20">
+      <div class="flex items-center gap-3">
+        <div class="h-1.5 w-12 rounded-full bg-indigo-600"></div>
+        <h2 class="text-xl font-semibold text-slate-900">Skills</h2>
+      </div>
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Programming</h3>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Python</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">SQL</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">OOPS</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Java</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">JavaScript</span>
+
+          </div>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Data Science</h3>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Pandas</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">NumPy</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Matplotlib</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Seaborn</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Scipy</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Data Cleaning</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Statistics</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">EDA</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Hypothesis Testing</span>
+
+          </div>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Machine Learning</h3>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Scikit-Learn</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Feature Engineering</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Classification</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Regression</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Clustering</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Anomaly Detection</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Model Evaluation</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Hyperparameter Tuning</span>
+
+          </div>
+        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Tools</h3>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Jupyter Notebook</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Git</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">GitHub</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">MySQL</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">BigQuery</span>
+            <span class="rounded-full bg-slate-100 px-4 py-2 text-sm text-slate-700">Google Sheet</span>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="mt-20">
+      <div class="flex items-center gap-3">
+        <div class="h-1.5 w-12 rounded-full bg-indigo-600"></div>
+        <h2 class="text-xl font-semibold text-slate-900">Projects</h2>
+      </div>
+
+      <div class="mt-10 space-y-8">
+        <div>
+          <h3 class="text-lg font-semibold text-slate-900">Learning & Foundation Projects</h3>
+          <p class="mt-2 max-w-2xl text-sm leading-7 text-slate-600">Projects built while learning core Data Science and
+            Machine Learning concepts.</p>
+          <div class="mt-6 grid gap-6 lg:grid-cols-2">
+            <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h4 class="text-base font-semibold text-slate-900">
+                Web Scraping of a Book Store
+              </h4>
+
+              <p class="mt-1 text-sm font-medium text-slate-500">
+                Oct-2025
+              </p>
+              <p class="mt-3 text-sm leading-7 text-slate-600">I scraped book data from a static demo website(Book to
+                Scarpe) and extracted three key fields and converted the data into a structured format for analysis. The
+                extracted fields are:
+              <ul class="mt-3 text-sm leading-7 text-slate-600">
+                <li><strong>Title:</strong> Name of each book</li>
+                <li><strong>Price:</strong> Price of the book in GBP (£)</li>
+                <li><strong>Ratings:</strong> Stars given to the book out of 5</li>
+              </ul>
+              </p>
+              <p class="mt-4 text-sm font-medium text-slate-900">Tech Stack: Python, Pandas, BeautifulSoup, requests</p>
+              <a href="https://github.com/Rajnish-28/Webscraping_1_booktoscarpe"
+                class="mt-5 inline-flex text-sm font-medium text-indigo-600 hover:text-indigo-700">View GitHub
+                →</a>
+            </article>
+            <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h4 class="text-base font-semibold text-slate-900">Customer Churn Analysis</h4>
+              <p class="mt-3 text-sm leading-7 text-slate-600">Performed Exploratory Data Analysis (EDA) on a Telecom
+                Customer Churn dataset to visualize patterns, explore features, and understand factors influencing
+                customer churn.</p>
+              <p class="mt-4 text-sm font-medium text-slate-900">Tech Stack: Pandas, Matplotlib, Seaborn</p>
+              <a href="https://github.com/Rajnish-28/Customer-Churn-Analysis"
+                class="mt-5 inline-flex text-sm font-medium text-indigo-600 hover:text-indigo-700">View GitHub
+                →</a>
+            </article>
+
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-slate-900">Applied Data Science Projects</h3>
+          <p class="mt-2 max-w-2xl text-sm leading-7 text-slate-600">Projects demonstrating practical problem-solving
+            and real-world data analysis.</p>
+          <div class="mt-6 grid gap-6 lg:grid-cols-2">
+            <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h4 class="text-base font-semibold text-slate-900">SpaceX Landing Success Prediction (IBM Data Science
+                Capstone Project)</h4>
+              <p class="mt-3 text-sm leading-7 text-slate-600">Analyzed SpaceX Falcon 9 launch data to study landing
+                success patterns and predict first-stage recovery. Collected data using API + web scraping, performed
+                EDA and SQL analysis, built interactive dashboards, and trained ML models (LogReg, SVM, KNN, Decision
+                Tree) achieving ~83% accuracy.</p>
+              <p class="mt-4 text-sm font-medium text-slate-900">Tech Stack: Python, SQL, Tableau</p>
+              <a href="https://github.com/Rajnish-28/IBM_capstone_project"
+                class="mt-5 inline-flex text-sm font-medium text-indigo-600 hover:text-indigo-700">View GitHub
+                →</a>
+            </article>
+            <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h4 class="text-base font-semibold text-slate-900">Student Marks Predictor</h4>
+              <p class="mt-3 text-sm leading-7 text-slate-600">Built a machine learning model to predict student
+                performance based on various factors like attendance, gender, sleep hours, study hours, exam difficulty,
+                age, studey methods and internet access. Trained Multiple Classification Models such as Logistic
+                Regression, Decision Tree, Gradient Boosting, Random Forest and XGBoost. Tuned hyperparameters using
+                Grid Search to optimize model performance and Achieved an accuracy of ~74% by avoiding overfitting. And
+                then Deployed the model using Flask.</p>
+              <p class="mt-4 text-sm font-medium text-slate-900">Tech Stack: Python, Excel, Scikit-Learn</p>
+              <a href="http://github.com/Rajnish-28/Students-Marks-Predictor"
+                class="mt-5 inline-flex text-sm font-medium text-indigo-600 hover:text-indigo-700">View GitHub
+                →</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="mt-20">
+      <div class="flex items-center gap-3">
+        <div class="h-1.5 w-12 rounded-full bg-indigo-600"></div>
+        <h2 class="text-xl font-semibold text-slate-900">Certifications</h2>
+      </div>
+
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Certificate 1 -->
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+
+          <div class="flex gap-4">
+            <a href="google1.png" target="_blank">
+              <img src="google1.png" class="h-16 w-16 rounded-xl border border-slate-200 object-cover"
+                alt="Certificate">
+            </a>
+
+            <div class="flex-1">
+              <h3 class="text-base font-semibold text-slate-900">
+                Process Data from Dirty to Clean
+              </h3>
+              <div
+                class="mt-1 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-2 py-1 text-sm text-slate-600">
+                <img src="google.png" alt="Google" class="h-4 w-4 object-contain">
+                <span>Google</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-500">September 2025</p>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <a href="https://coursera.org/share/d8f088f15438869f949159eca9548f62" target="_blank"
+              class="text-sm font-medium text-indigo-600 hover:text-indigo-700">
+              Verify Credential →
+            </a>
+          </div>
+
+          <details class="mt-4">
+            <summary class="cursor-pointer text-sm font-large text-slate-700">
+              Skills Gained
+            </summary>
+
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Data Cleaning
+              </span>
+
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Data Integrity
+              </span>
+
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Google Sheet
+              </span>
+
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                SQL
+              </span>
+
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Data Validation
+              </span>
+            </div>
+          </details>
+        </article>
+        <!-- Certificate 2 -->
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+
+          <div class="flex gap-4">
+            <a href="google2.png" target="_blank">
+              <img src="google2.png" class="h-16 w-16 rounded-xl border border-slate-200 object-cover"
+                alt="Certificate">
+            </a>
+
+            <div class="flex-1">
+              <h3 class="text-base font-semibold text-slate-900">
+                The Power of Statistics
+              </h3>
+              <div
+                class="mt-1 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-2 py-1 text-sm text-slate-600">
+                <img src="google.png" alt="Google" class="h-4 w-4 object-contain">
+                <span>Google</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-500">October 2025</p>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <a href="https://coursera.org/share/7cd6a2c6bf8dc68d3d28042d8a4ce48f" target="_blank"
+              class="text-sm font-medium text-indigo-600 hover:text-indigo-700">
+              Verify Credential →
+            </a>
+          </div>
+          <details class="mt-4">
+            <summary class="cursor-pointer text-sm font-large text-slate-700">
+              Skills Gained
+            </summary>
+
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Statistical Hypothesis Testing
+              </span>
+
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                SciPy
+              </span>
+
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Sampling
+              </span>
+
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                SQL
+              </span>
+
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Statistics and Probability
+              </span>
+            </div>
+          </details>
+
+        </article>
+        <!-- Certificate 2 -->
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+
+          <div class="flex gap-4">
+            <a href="sql.png" target="_blank">
+              <img src="sql.png" class="h-16 w-16 rounded-xl border border-slate-200 object-cover" alt="Certificate">
+            </a>
+
+            <div class="flex-1">
+              <h3 class="text-base font-semibold text-slate-900">
+                SQL(Basics)
+              </h3>
+              <div
+                class="mt-1 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-2 py-1 text-sm text-slate-600">
+                <img src="hackerrank.png" alt="Hacker Rank" class="h-4 w-4 object-contain">
+                <span>Hacker Rank</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-500">October 2025</p>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <a href="https://www.hackerrank.com/certificates/9a1750526897" target="_blank"
+              class="text-sm font-medium text-indigo-600 hover:text-indigo-700">
+              Verify Credential →
+            </a>
+          </div>
+
+          <details class="mt-4">
+            <summary class="cursor-pointer text-sm font-large text-slate-700">
+              Skills Demonstrated
+            </summary>
+
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                MySQL
+              </span>
+
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                SQL
+              </span>
+
+            </div>
+          </details>
+        </article>
+
+        <!-- Certificate 2 -->
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+
+          <div class="flex gap-4">
+            <a href="IBMDS.png" target="_blank">
+              <img src="IBMDS.png" class="h-16 w-16 rounded-xl border border-slate-200 object-cover" alt="Certificate">
+            </a>
+
+            <div class="flex-1">
+              <h3 class="text-base font-semibold text-slate-900">
+                IBM Data Science Professional Certificate
+              </h3>
+              <div class="mt-1 flex items-center gap-2 text-sm text-slate-600">
+                <div
+                  class="mt-1 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-2 py-1 text-sm text-slate-600">
+                  <img src="ibm.png" alt="IBM" class="h-4 w-4 object-contain">
+                  <span>IBM</span>
+                </div>
+
+              </div>
+              <p class="mt-2 text-sm text-slate-500">Aug - Dec 2025</p>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <a href="https://coursera.org/share/3495cbcb26db41f969f3876863daca53" target="_blank"
+              class="text-sm font-medium text-indigo-600 hover:text-indigo-700">
+              Verify Credential →
+            </a>
+          </div>
+
+          <details class="mt-4">
+            <summary class="cursor-pointer text-sm font-large text-slate-700">
+              Skills Gained
+            </summary>
+
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Python Programming
+              </span>
+
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Web Scraping
+              </span>
+
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                SQL
+              </span>
+
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Data Collection
+              </span>
+
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Relational Database
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Numpy
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Pandas
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Data Analysis
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Matplotlib
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Seaborn
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Feature Engineering
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Machine Learning
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Classification
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Regression
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Clustering
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Model Evaluation
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Hyperparameter Tuning
+              </span>
+            </div>
+          </details>
+        </article>
+
+        <!-- Certificate 2 -->
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+
+          <div class="flex gap-4">
+            <a href="flask.png" target="_blank">
+              <img src="flask.png" class="h-16 w-16 rounded-xl border border-slate-200 object-cover" alt="Certificate">
+            </a>
+
+            <div class="flex-1">
+              <h3 class="text-base font-semibold text-slate-900">
+                Python and Flask Bootcamp
+              </h3>
+              <div
+                class="mt-1 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-2 py-1 text-sm text-slate-600">
+                <img src="udemy.png" alt="Udemy" class="h-4 w-4 object-contain">
+                <span>Udemy</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-500">Nov-Jan 2025</p>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <a href="https://www.udemy.com/certificate/UC-cdfb2997-db43-407e-bff5-031d263bbdd4" target="_blank"
+              class="text-sm font-medium text-indigo-600 hover:text-indigo-700">
+              Verify Credential →
+            </a>
+          </div>
+          <details class="mt-4">
+            <summary class="cursor-pointer text-sm font-large text-slate-700">
+              Skills Gained
+            </summary>
+
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Flask
+              </span>
+
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Docker
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Html
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                CSS
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Deployment
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                SQLAlchemy
+              </span>
+
+            </div>
+          </details>
+
+        </article>
+
+        <!-- Certificate 3 -->
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+
+          <div class="flex gap-4">
+            <a href="supervised.png" target="_blank">
+              <img src="supervised.png" class="h-16 w-16 rounded-xl border border-slate-200 object-cover"
+                alt="Certificate">
+            </a>
+
+            <div class="flex-1">
+              <h3 class="text-base font-semibold text-slate-900">
+                Supervised Machine Learning
+              </h3>
+              <div
+                class="mt-1 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-2 py-1 text-sm text-slate-600">
+                <img src="deeplearning_ai.png" alt="DeepLearning.AI" class="h-4 w-4 object-contain">
+                <span>DeepLearning.AI</span>
+              </div>
+              <p class="mt-2 text-sm text-slate-500">April-May 2026</p>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <a href="https://coursera.org/share/5b23c3d2fd5b07aa7e10f307a6d966cc" target="_blank"
+              class="text-sm font-medium text-indigo-600 hover:text-indigo-700">
+              Verify Credential →
+            </a>
+          </div>
+          <details class="mt-4">
+            <summary class="cursor-pointer text-sm font-large text-slate-700">
+              Skills Gained
+            </summary>
+
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Feature Engineering
+              </span>
+
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Machine Learning
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Regression
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Classification
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Model Evaluation
+              </span>
+              <span class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-700">
+                Numpy
+              </span>
+
+            </div>
+          </details>
+
+        </article>
+
+      </div>
+    </section>
+
+    <section id="contact" class="mt-20">
+      <div class="flex items-center gap-3">
+        <div class="h-1.5 w-12 rounded-full bg-indigo-600"></div>
+        <h2 class="text-xl font-semibold text-slate-900">Contact</h2>
+      </div>
+
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+        <!-- LinkedIn -->
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-sm uppercase tracking-[0.18em] text-slate-500">
+            LinkedIn
+          </p>
+
+          <a href="https://www.linkedin.com/in/rajnishtiwari28/" target="_blank"
+            class="mt-4 block text-sm font-medium text-indigo-600 hover:text-indigo-700 hover:underline">
+            linkedin.com/in/rajnishtiwari28
+          </a>
+        </article>
+
+        <!-- GitHub -->
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-sm uppercase tracking-[0.18em] text-slate-500">
+            GitHub
+          </p>
+
+          <a href="https://github.com/Rajnish-28" target="_blank"
+            class="mt-4 block text-sm font-medium text-indigo-600 hover:text-indigo-700 hover:underline">
+            github.com/Rajnish-28
+          </a>
+        </article>
+
+        <!-- Email -->
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-sm uppercase tracking-[0.18em] text-slate-500">
+            Email
+          </p>
+
+          <a href="mailto:rajnish592006@gmail.com"
+            class="mt-4 block text-sm font-medium text-indigo-600 hover:text-indigo-700 hover:underline">
+            rajnish592006@gmail.com
+          </a>
+        </article>
+
+        <!-- Phone -->
+        <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <p class="text-sm uppercase tracking-[0.18em] text-slate-500">
+            Phone
+          </p>
+
+          <a href="tel:8957305157"
+            class="mt-4 block text-sm font-medium text-indigo-600 hover:text-indigo-700 hover:underline">
+            +91 8957305157
+          </a>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-6">
+    <div class="mx-auto max-w-6xl px-4 text-center text-sm text-slate-500 sm:px-6">
+      © 2026 Rajnish Tiwari. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>
+    const typedElement = document.getElementById('typed-name');
+    const text = 'Rajnish Tiwari ';
+    let position = 1;
+    let forward = true;
+
+    function animateTyping() {
+      if (forward) {
+        position += 1;
+        if (position === text.length) {
+          forward = false;
+          setTimeout(animateTyping, 1400);
+          return;
+        }
+      } else {
+        position -= 1;
+        if (position === 1) {
+          forward = true;
+        }
+      }
+      typedElement.textContent = text.slice(0, position);
+      setTimeout(animateTyping, forward ? 120 : 60);
+    }
+
+    animateTyping();
+  </script>
+</body>
+
+</html>
